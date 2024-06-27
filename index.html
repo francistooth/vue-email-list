@@ -4,24 +4,31 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-   <title>Vue To-Do List</title>
-   <!-- Bootstrap CSS -->
-
-   <link rel="stylesheet" href="css/style.css">
-   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-</head>
-<body>
-   <div id="app" class="container mt-5">
-      
-   </div>
+   <title>Vue Email List</title>
 
    <!-- Vue.js -->
    
    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
-   <script type="text/javascript" src="js/main.js"></script>
 
-   <!-- Bootstrap -->
-   
-   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+   <!-- Bootstrap CSS -->
+
+   <link rel="stylesheet" href="css/style.css">
+   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.2/axios.min.js" integrity="sha512-JSCFHhKDilTRRXe9ak/FJ28dcpOJxzQaCd3Xg8MyF6XFjODhy/YMCM8HW0TFDckNHWUewW+kfvhin43hKtJxAw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+   <div id="app" class="container mt-5">
+      <!-- <form @submit.prevent="createEmails(10)">
+         <div class="input-group mb-3">
+            <button class="btn btn-primary" type="submit">Aggiungi</button>
+         </div>
+      </form> -->
+      <ul>
+         <li v-if="email != ''"> {{ email }} </li>
+      </ul>
+   </div>
+
+   <script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
