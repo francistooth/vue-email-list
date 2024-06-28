@@ -19,13 +19,8 @@
 
 <body>
    <div id="app" class="container mt-5">
-      <!-- <form @submit.prevent="createEmails(10)">
-         <div class="input-group mb-3">
-            <button class="btn btn-primary" type="submit">Aggiungi</button>
-         </div>
-      </form> -->
       <ul>
-         <li v-if="email != ''"> {{ email }} </li>
+         <li v-if="emails.length == 10" v-for="(email,index) in emails" :key="index"> {{ email }} </li>
       </ul>
    </div>
 
